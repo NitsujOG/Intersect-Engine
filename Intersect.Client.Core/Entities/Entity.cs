@@ -1294,7 +1294,7 @@ public partial class Entity : IEntity
         var srcRectangle = new FloatRect(frame * frameWidth, spriteRow * frameHeight, frameWidth, frameHeight);
         var destRectangle = new FloatRect(
             (int)Math.Ceiling(Origin.X - frameWidth / 2f),
-            (int)Math.Ceiling(Origin.Y - frameHeight),
+            (int)Math.Ceiling(Origin.Y - frameHeight / 2f),
             srcRectangle.Width,
             srcRectangle.Height
         );
@@ -1562,7 +1562,7 @@ public partial class Entity : IEntity
 
         mOrigin = new Vector2(
             (float)Math.Round(LatestMap.X + X * TileWidth + OffsetX + TileWidth / 2f),
-            (float)Math.Round(LatestMap.Y + Y * TileHeight + OffsetY + TileHeight)
+            (float)Math.Round(LatestMap.Y + Y * TileHeight + OffsetY + TileHeight / 2f)
         );
     }
 
